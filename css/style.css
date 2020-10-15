@@ -1,0 +1,209 @@
+/*navigation*/
+nav h1 {
+  color: blue;
+  font-size: 30px;
+  text-align: center;
+}
+nav li {
+  list-style-type: none;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+nav a:link, nav a:visited {
+  color: black;
+  text-decoration: none;
+}
+nav a:hover, nav a:focus {
+  text-decoration: none;
+  font-size: 25px;
+}
+nav .active {
+  border: 1.5px solid;
+  background-color: cyan;
+}
+
+/*movie generator*/
+.action, .comedy, .drama, .dance, .horror, .family-kids {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 30px;
+  border: 2px solid blue;
+  padding: 30px;
+  margin: 10px;
+}
+.action h2, .comedy h2, .horror h2, .drama h2, .dance h2, .family-kids h2 {
+  /* display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 3px solid green;
+  font-size: 30px;
+  position: absolute; */
+  /* padding: 30px;
+  justify-content: center; */
+}
+.action-cat, .comedy-cat, .horror-cat, .drama-cat, .dance-cat, .family-kids-cat {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 150px;
+  box-shadow: 10px yellow;
+  padding: 10px;
+  z-index: 1;
+  text-align: center;
+}
+.d-movies, .gv-movies {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 150px;
+  box-shadow: 10px yellow;
+  padding: 10px;
+  z-index: 1;
+}
+.action:hover .action-cat {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*top 10*/
+#main ul, #main a {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+#main a:hover {
+  font-size: 25px;
+  color: green;
+}
+.image-1980, .image-1981, .image-1982, .image-1983, .image-1984, .image-1985, .image-1986, .image-1987, .image-1988, .image-1989 {
+  display: flex;
+  text-align: center;
+  /* justify-content: space-around; */
+  width: 100vw;
+  height: 40vh;
+  overflow-y: scroll;
+  border: 3px solid black;
+  margin: 15px;
+}
+figure {
+  width: 300px;
+  margin: 10px;
+  flex-basis: 300px;
+}
+figure img {
+  height: 30vh; /*needs to be bigger for mobile view*/
+}
+
+
+
+
+/*facts and information*/
+.container4 {
+  display: grid;
+  grid-template-columns: repeat(6, 20%);
+  grid-template-rows: repeat(5, 20%);
+}
+.movie-info1 h2, .movie-info2 h2, .movie-info3 h2, .fun-facts h2, .photos h2{
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+.fun-facts {
+  text-align: center;
+}
+.fun-facts li {
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+  list-style-type: none;
+  text-align: left;
+  padding: 10px;
+  border: 3px solid black;
+}
+.movie-info1, .movie-info2, .movie-info3 {
+  text-align: center;
+}
+.movie-info1 li {
+  grid-column: 2 / span 1;
+  grid-row: 1 / -1;;
+  list-style-type: none;
+  padding: 10px;
+  border: 3px solid red;
+}
+.movie-info2 li {
+  grid-column: 3 / span 1;
+  grid-row: 1/ -1;
+  list-style-type: none;
+  padding: 10px;
+  border: 3px solid red;
+}
+.movie-info3 li {
+  grid-column: 4 / span 1;
+  grid-row: 1 / -1;;
+  list-style-type: none;
+  padding: 10px;
+  border: 3px solid red;
+}
+.photos {
+  text-align: center;
+}
+.photos-raiders img, .photos-ferris img, .photos-ghost img, .photos-pink img, .photos-future img, .photos-scarface img, .photos-outsider img, .photos-empire img, .photos-bfast img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  grid-column: 2 / -1;
+  grid-row: 1 / span 1;
+  border: 3px solid green;
+}
+.photos-raiders, .photos-ferris, .photos-ghost, .photos-pink, .photos-future, .photos-scarface, .photos-outsider, .photos-empire, .photos-bfast {
+  text-align: center;
+}
+.photos-raiders {
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 1;
+}
+.photos-ferris {
+  grid-column: 6 / span 1;
+  grid-row: 2 / span 1;
+}
+.photos-ghost {
+  grid-column: 5 / span 1;
+  grid-row: 3 / span 1;
+}
+.photos-pink {
+  grid-column: 6 / span 1;
+  grid-row: 3 / span 1;
+}
+.photos-future {
+  grid-column: 5 / span 1;
+  grid-row: 4 / span 1;
+}
+.photos-scarface {
+  grid-column: 6 / span 1;
+  grid-row: 4 / span 1;
+}
+.photos-outsider {
+  grid-column: 5 / span 1;
+  grid-row: 5 / span 1;
+}
+.photos-empire {
+  grid-column: 6 / span 1;
+  grid-row: 5 / span 1;
+}
+.photos-bfast {
+  grid-column: 5 / span 2;
+  grid-row: 6 / span 1;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
