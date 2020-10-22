@@ -1,5 +1,6 @@
 body {
   font-family: 'Cormorant', sans-serif;
+  background-color: #dfe0d1;
 }
 main {
   margin: 10px;
@@ -19,15 +20,37 @@ a.skip:focus{
   color: black;
   text-decoration-style: solid;
 }
+@-webkit-keyframes image-move {
+  from {width: 25px;}
+  to {width: 100px;}
+}
+
+@keyframes image-move {
+  from {width: 25px;}
+  to {width: 100px;}
+}
+
+#logo {
+   animation-name: image-move;
+   animation-duration: 0s; /*CHANGE TO A NUMBER!!!*/
+   animation-iteration-count: 1;
+   max-width: 100px;
+   height: auto;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 10px;
+}
+
 /*navigation*/
 nav h1 {
   color: blue;
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
 }
 nav li {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   color: black;
   text-decoration: none;
@@ -39,13 +62,37 @@ nav a:link, nav a:visited {
 }
 nav a:hover, nav a:focus {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 nav .active {
   border: 1.5px solid;
-  background-color: cyan;
+  background-color: #8badf0;
 }
 
+/*home page*/
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+}
+.titles {
+  grid-row: 1 / span 1;
+  text-align: center;
+  color: #462766;
+}
+.info {
+  grid-row: 2 / span 1;
+  padding: 10px;
+}
+.info p {
+  padding: 5px;
+  color: #d117b2;
+}
+.contact-form {
+  grid-row: 3 / span 1;
+  padding: 10px;
+  color: #d117b2;
+}
 
 /*movie generator*/
 .action, .comedy, .drama, .dance, .horror, .family-kids {
@@ -66,7 +113,7 @@ nav .active {
   padding: 10px;
   text-align: center;
 }
-.d-movies, .gv-movies {
+.d-movies, .gv-movies, .ad-movies, .sup-movies, .vac-movies, .lol-movies, .dark-movies, .wack-movies, .hol-movies, .romcom-movies, .crime-movies, .sci-movies, .sing-movies, .dance-movies, .doll-movies, .sk-movies, .scifi-movies, .mon-movies, .slash-movies, .hs-movies, .anim-movies, .child-movies, .fam-movies {
   display: none;
   position: absolute;
   background-color: gray;
@@ -74,7 +121,7 @@ nav .active {
   box-shadow: 10px yellow;
   padding: 10px;
 }
-.action:hover .action-cat {
+.action:hover .action-cat, .comedy:hover .comedy-cat, .drama:hover .drama-cat, .dance:hover .dance-cat, .horror:hover .horror-cat, .family-kids:hover .family-kids-cat {
   display: flex;
   flex-direction: column;
 }
@@ -96,7 +143,7 @@ nav .active {
 }
 .container3 a:hover {
   font-size: 25px;
-  color: green;
+  color: #f067e7;
 }
 .image-1980, .image-1981, .image-1982, .image-1983, .image-1984, .image-1985, .image-1986, .image-1987, .image-1988, .image-1989 {
   display: flex;
@@ -106,7 +153,11 @@ nav .active {
   height: 40vh;
   overflow-y: scroll;
   border: 3px solid black;
+  background-color: #efe0ff;
   margin: 15px;
+}
+.image-1980 img, .image-1981 img, .image-1982 img, .image-1983 img, .image-1984 img, .image-1985 img, .image-1986 img, .image-1987 img, .image-1988 img, .image-1989 img {
+  border: 2px solid #adadad;
 }
 figure {
   width: 300px;
@@ -205,4 +256,9 @@ footer {
   color: white;
   background-color: black;
   margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
 }
