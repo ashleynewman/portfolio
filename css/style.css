@@ -96,14 +96,17 @@ nav .active {
 
 /*movie generator*/
 .action, .comedy, .drama, .dance, .horror, .family-kids {
-  display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
   font-size: 30px;
   border: 2px solid blue;
   padding: 30px;
   margin: 10px;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .action-cat, .comedy-cat, .horror-cat, .drama-cat, .dance-cat, .family-kids-cat {
   display: none;
   position: absolute;
@@ -136,19 +139,24 @@ nav .active {
 .container3 ul, .container3 a {
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
   text-decoration: none;
   list-style-type: none;
   color: black;
+  padding: 10px;
 }
 .container3 a:hover {
   font-size: 25px;
   color: #f067e7;
 }
+.years-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .image-1980, .image-1981, .image-1982, .image-1983, .image-1984, .image-1985, .image-1986, .image-1987, .image-1988, .image-1989 {
   display: flex;
   text-align: center;
-  /* justify-content: space-around; */
   width: 100vw;
   height: 40vh;
   overflow-y: scroll;
@@ -160,7 +168,7 @@ nav .active {
   border: 2px solid #adadad;
 }
 figure {
-  width: 300px;
+  width: 100%; /*300px;*/
   margin: 10px;
   flex-basis: 300px;
 }
@@ -174,7 +182,10 @@ figure img {
 /*facts and information*/
 .container4 {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
   margin: 10px;
+  margin-right: 15px;
 }
 .movie-info1, .movie-info2, .movie-info3 {
   text-align: center;
@@ -185,59 +196,69 @@ figure img {
 }
 .movie-info1 {
   grid-column: 1 / span 1;
-  grid-row: 5 / span 1;
+  grid-row: 6 / span 1;
 }
 .movie-info2 {
   grid-column: 2 / span 1;
-  grid-row: 5 / span 1;
+  grid-row: 6 / span 1;
 }
 .movie-info3 {
   grid-column: 3 / span 1;
-  grid-row: 5 / span 1;
+  grid-row: 6 / span 1;
+}
+.photos {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 1;
+  padding: 10px;
+  text-align: center;
 }
 .photos-raiders img, .photos-ferris img, .photos-ghost img, .photos-pink img, .photos-future img, .photos-scarface img, .photos-outsider img, .photos-empire img, .photos-bfast img {
-  width: 35vw;
+  /* width: 35vw;
   height: 40vh;
-  padding: 10px;
+  padding: 10px; for non-mobile do in media-query for min height thing^*/
+  width: 25vw;
+  height: 100px;
+  align-items: bottom;
 }
 .photos-raiders, .photos-ferris, .photos-ghost, .photos-pink, .photos-future, .photos-scarface, .photos-outsider, .photos-empire, .photos-bfast {
   text-align: center;
+  padding: 15px;
 }
 .photos-raiders {
   grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
 }
 .photos-ferris {
   grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
 }
 .photos-ghost {
   grid-column: 3 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
 }
 .photos-pink {
   grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
+  grid-row: 4 / span 1;
 }
 .photos-future {
   grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
+  grid-row: 4 / span 1;
 }
 .photos-scarface {
   grid-column: 3 / span 1;
-  grid-row: 3 / span 1;
+  grid-row: 4 / span 1;
 }
 .photos-outsider {
   grid-column: 1 / span 1;
-  grid-row: 4 / span 1;
+  grid-row: 5 / span 1;
 }
 .photos-empire {
   grid-column: 2 / span 1;
-  grid-row:  4 / span 1;
+  grid-row:  5 / span 1;
 }
 .photos-bfast {
   grid-column: 3 / span 2;
-  grid-row: 4 / span 1;
+  grid-row: 5 / span 1;
 }
 .fun-facts {
   grid-column: 1 / span 3;
