@@ -46,7 +46,25 @@
       would like to suggest another movie to be added to the lists here!</p>
   </div>
 
+  <form action="https://formspree.io/f/mpzorwwy" method="POST">
+      <fieldset>
+        <legend>Contact Form</legend>
 
+        <label for="name_id">Your Name</label>
+        <input id="name_id" type="text" placeholder="John Smith" name="name">
+
+        <label for="email_id">Your Email</label>
+        <input id="email_id" type="email" placeholder="example@gmail.com" name="email">
+
+        <label for="message_id">Leave a Suggestion</label>
+        <textarea id="message_id" placeholder="Type your message here" name="message" required></textarea><br>
+
+        <input id="check_id" type="checkbox" name="check" checked>
+        <label for="check_id">Remember Me</label>
+        
+        <input type="submit" value="Submit">
+      </fieldset>
+  </form>
 
 
 
