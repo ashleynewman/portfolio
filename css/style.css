@@ -41,6 +41,12 @@ a.skip:focus{
    margin-right: auto;
    padding: 10px;
 }
+header h1 {
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+  color: #000080;
+}
 
 /*navigation*/
 nav h1 {
@@ -114,6 +120,7 @@ nav .active {
   /* border: 2px solid blue; PROBLEM HERE */
   padding: 30px;
   margin: 10px;
+
 }
 .action-inner img, .comedy-inner img, .drama-inner img, .dance-inner img, .horror-inner img, .family-inner img {
   border: 2px solid black;
@@ -201,7 +208,7 @@ nav .active {
   margin: 15px;
 }
 .image-1980 img, .image-1981 img, .image-1982 img, .image-1983 img, .image-1984 img, .image-1985 img, .image-1986 img, .image-1987 img, .image-1988 img, .image-1989 img {
-  border: 2px solid #adadad;
+  border: 2px solid black;
 }
 
 figure {
