@@ -1,6 +1,6 @@
 body {
   font-family: 'Cormorant', sans-serif;
-  background-color: #dfe0d1;
+  background-color: #e7e7dc;
 }
 main {
   margin: 10px;
@@ -32,7 +32,7 @@ a.skip:focus{
 
 #logo {
    animation-name: image-move;
-   animation-duration: 0s; /*CHANGE TO A NUMBER!!!*/
+   animation-duration: 1s; /*CHANGE TO A NUMBER!!!*/
    animation-iteration-count: 1;
    max-width: 100px;
    height: auto;
@@ -51,10 +51,14 @@ nav h1 {
 nav li {
   list-style-type: none;
   font-size: 15px;
-  text-align: center;
+  /* text-align: center; */
   color: black;
   text-decoration: none;
   padding: 3px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 nav a:link, nav a:visited {
   color: black;
@@ -66,72 +70,104 @@ nav a:hover, nav a:focus {
 }
 nav .active {
   border: 1.5px solid;
-  background-color: #8badf0;
+  background-color: #f45ae6;
 }
 
 /*home page*/
 .container1 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr 1fr;
 }
-.titles {
+.titles, .fun-facts h2, .movie-info1 h2, .movie-info2 h2, .movie-info3 h2, .photos h2 {
   grid-row: 1 / span 1;
   text-align: center;
-  color: #462766;
+  text-shadow: 2px 2px 5px #e1ad01;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 15px;
 }
 .info {
   grid-row: 2 / span 1;
   padding: 10px;
 }
 .info p {
-  padding: 5px;
-  color: #d117b2;
-}
-.contact-form {
-  grid-row: 3 / span 1;
   padding: 10px;
-  color: #d117b2;
+  color: #40025c;
+}
+.contact-form p {
+  grid-row: 3 / span 1;
+  padding: 40px 20px 20px 20px;
+  color: #40025c;
 }
 
 /*movie generator*/
-.action, .comedy, .drama, .dance, .horror, .family-kids {
-  font-size: 30px;
-  border: 2px solid blue;
-  padding: 30px;
-  margin: 10px;
-}
 .button-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
-.action-cat, .comedy-cat, .horror-cat, .drama-cat, .dance-cat, .family-kids-cat {
-  display: none;
-  position: absolute;
-  background-color: gray;
-  min-width: 150px;
-  box-shadow: 10px yellow;
-  padding: 10px;
+.action, .comedy, .drama, .dance, .horror, .family {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  /* border: 2px solid blue; PROBLEM HERE */
+  padding: 30px;
+  margin: 10px;
+}
+.action-inner img, .comedy-inner img, .drama-inner img, .dance-inner img, .horror-inner img, .family-inner img {
+  border: 2px solid black;
+}
+.action-inner, .comedy-inner, .drama-inner, .dance-inner, .horror-inner, .family-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.action:hover .action-inner, .comedy:hover .comedy-inner, .drama:hover .drama-inner, .dance:hover .dance-inner, .horror:hover .horror-inner, .family:hover .family-inner {
+  transform: rotateY(180deg);
+}
+.action-front, .action-back, .comedy-front, .comedy-back, .drama-front, .drama-back, .dance-front, .dance-back, .horror-front, .horror-back, .family-front, .family-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.action-front, .comedy-front, .drama-front, .dance-front, .horror-front, .family-front {
+  background-color: #bbb;
+  color: black;
+}
+.action-back, .comedy-back, .drama-back, .dance-back, .horror-back, .family-back {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+.action-back p, .comedy-back p, .drama-back p, .dance-back p, .horror-back p, .family-back p {
+  padding: 10px;
 }
 .d-movies, .gv-movies, .ad-movies, .sup-movies, .vac-movies, .lol-movies, .dark-movies, .wack-movies, .hol-movies, .romcom-movies, .crime-movies, .sci-movies, .sing-movies, .dance-movies, .doll-movies, .sk-movies, .scifi-movies, .mon-movies, .slash-movies, .hs-movies, .anim-movies, .child-movies, .fam-movies {
   display: none;
   position: absolute;
-  background-color: gray;
+  background-color: lightgray;
   min-width: 150px;
   box-shadow: 10px yellow;
   padding: 10px;
 }
-.action:hover .action-cat, .comedy:hover .comedy-cat, .drama:hover .drama-cat, .dance:hover .dance-cat, .horror:hover .horror-cat, .family-kids:hover .family-kids-cat {
+.action-back:hover .d-movies, .action-back:hover .gv-movies, .action-back:hover .ad-movies, .action-back:hover .sup-movies, .comedy-back:hover .vac-movies, .comedy-back:hover .lol-movies, .comedy-back:hover .dark-movies, .comedy-back:hover .wack-movies, .comedy-back:hover .hol-movies,
+.drama-back:hover .romcom-movies, .drama-back:hover .crime-movies, .drama-back:hover .sci-movies, .dance-back:hover .sing-movies, .dance-back:hover .dance-movies, .horror-back:hover .doll-movies, .horror-back:hover .sk-movies, .horror-back:hover .scifi-movies, .horror-back:hover .mon-movies, .horror-back:hover .slash-movies,
+.family-back:hover .hs-movies, .family-back:hover .anim-movies, .family-back:hover .child-movies, .family-back:hover .fam-movies {
   display: flex;
   flex-direction: column;
 }
-.action-cat p:hover {
-  border: 2px solid black;
-  background-color: yellow;
+.d-movies p, .gv-movies p, .ad-movies p, .sup-movies p, .vac-movies p, .lol-movies p, .dark-movies p, .wack-movies p, .hol-movies p, .romcom-movies p, .crime-movies p, .sci-movies p, .sing-movies p, .dance-movies p, .doll-movies p, .sk-movies p, .scifi-movies p,
+.mon-movies p, .slash-movies p, .hs-movies p, .anim-movies p, .child-movies p, .fam-movies p {
+  padding: 10px;
 }
+
 
 
 
@@ -148,7 +184,7 @@ nav .active {
 }
 .container3 a:hover {
   font-size: 25px;
-  color: #f067e7;
+  color: #e1ad01;
 }
 .years-container {
   display: flex;
@@ -167,6 +203,7 @@ nav .active {
 .image-1980 img, .image-1981 img, .image-1982 img, .image-1983 img, .image-1984 img, .image-1985 img, .image-1986 img, .image-1987 img, .image-1988 img, .image-1989 img {
   border: 2px solid #adadad;
 }
+
 figure {
   width: 100%; /*300px;*/
   margin: 10px;
@@ -319,6 +356,21 @@ footer {
   background-color: black;
   margin: 0;
 }
+
+
+@media screen and (min-width: 850px) {
+  nav li {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+  }
+  #logo {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   #logo {
     animation: none;
