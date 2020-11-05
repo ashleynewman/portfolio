@@ -359,10 +359,10 @@ textarea {
   border: 2px solid black;
   box-sizing: border-box;
 }
-input[type=checkbox] {
+/* input[type=checkbox] {
   display: inline;
   width: inherit;
-}
+} */
 input[type=submit] {
   background-color: #e6dff3;
   font-size: 100%;
