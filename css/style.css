@@ -1,6 +1,6 @@
 body {
   font-family: 'Cormorant', sans-serif;
-  background-color: #f5f5f5; /*#e7e7dc;*/
+  background-color: #f5f5f5;
   font-size: 16px;
 }
 main {
@@ -52,7 +52,7 @@ header h1 {
   font-family: cursive;
   font-size: 350%;
   text-shadow: 2px 2px 5px black;
-  color: white; /*000080*/
+  color: white;
 }
 
 /*navigation*/
@@ -76,12 +76,13 @@ nav a:link, nav a:visited {
 }
 nav a:hover, nav a:focus {
   text-decoration: none;
-  font-size: 140%;
+  font-size: 110%;
+  font-weight: bold;
 }
 nav .active {
   border: 1.5px solid;
   padding: 5px;
-  background-color: #990A8D; /*#f45ae6;*/
+  background-color: #990A8D;
 }
 
 /*home page*/
@@ -104,7 +105,7 @@ nav .active {
 }
 .info p {
   padding: 10px;
-  color: #000080; /*40025c;*/
+  color: #000080;
 }
 .contact-form p {
   grid-row: 3 / span 1;
@@ -114,17 +115,16 @@ nav .active {
 
 /*movie generator*/
 .button-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .action, .comedy, .drama, .dance, .horror, .family {
   background-color: transparent;
   width: 200px;
   height: 200px;
-  padding: 30px;
+  padding: 50px;
   margin: 10px;
-
 }
 .action-inner img, .comedy-inner img, .drama-inner img, .dance-inner img, .horror-inner img, .family-inner img {
   border: 2px solid black;
@@ -138,6 +138,9 @@ nav .active {
   transform-style: preserve-3d;
 }
 .action:hover .action-inner, .comedy:hover .comedy-inner, .drama:hover .drama-inner, .dance:hover .dance-inner, .horror:hover .horror-inner, .family:hover .family-inner {
+  transform: rotateY(180deg);
+}
+.action:focus-within .action-inner, .comedy:focus-within .comedy-inner, .drama:focus-within .drama-inner, .dance:focus-within .dance-inner, .horror:focus-within .horror-inner, .family:focus-within .family-inner {
   transform: rotateY(180deg);
 }
 .action-front, .action-back, .comedy-front, .comedy-back, .drama-front, .drama-back, .dance-front, .dance-back, .horror-front, .horror-back, .family-front, .family-back {
@@ -157,26 +160,16 @@ nav .active {
   color: black;
   transform: rotateY(180deg);
 }
-.action-back p, .comedy-back p, .drama-back p, .dance-back p, .horror-back p, .family-back p {
-  padding: 10px;
-}
-.d-movies, .gv-movies, .ad-movies, .sup-movies, .vac-movies, .lol-movies, .dark-movies, .wack-movies, .hol-movies, .romcom-movies, .crime-movies, .sci-movies, .sing-movies, .dance-movies, .doll-movies, .sk-movies, .scifi-movies, .mon-movies, .slash-movies, .hs-movies, .anim-movies, .child-movies, .fam-movies {
+#d-movies, #gv-movies, #ad-movies, #sup-movies, #vac-movies, #lol-movies, #dark-movies, #wack-movies, #hol-movies, #romcom-movies, #crime-movies, #sci-movies, #sing-movies, #dance-movies, #doll-movies, #sk-movies, #scifi-movies, #mon-movies, #slash-movies, #hs-movies, #anim-movies, #child-movies, #fam-movies {
   display: none;
-  position: absolute;
   background-color: lightgray;
-  min-width: 150px;
-  box-shadow: 10px yellow;
+  width: 100%;
   padding: 10px;
 }
-.action-back:hover .d-movies, .action-back:hover .gv-movies, .action-back:hover .ad-movies, .action-back:hover .sup-movies, .comedy-back:hover .vac-movies, .comedy-back:hover .lol-movies, .comedy-back:hover .dark-movies, .comedy-back:hover .wack-movies, .comedy-back:hover .hol-movies,
-.drama-back:hover .romcom-movies, .drama-back:hover .crime-movies, .drama-back:hover .sci-movies, .dance-back:hover .sing-movies, .dance-back:hover .dance-movies, .horror-back:hover .doll-movies, .horror-back:hover .sk-movies, .horror-back:hover .scifi-movies, .horror-back:hover .mon-movies, .horror-back:hover .slash-movies,
-.family-back:hover .hs-movies, .family-back:hover .anim-movies, .family-back:hover .child-movies, .family-back:hover .fam-movies {
-  display: flex;
-  flex-direction: column;
-}
+
 .d-movies p, .gv-movies p, .ad-movies p, .sup-movies p, .vac-movies p, .lol-movies p, .dark-movies p, .wack-movies p, .hol-movies p, .romcom-movies p, .crime-movies p, .sci-movies p, .sing-movies p, .dance-movies p, .doll-movies p, .sk-movies p, .scifi-movies p,
 .mon-movies p, .slash-movies p, .hs-movies p, .anim-movies p, .child-movies p, .fam-movies p {
-  padding: 10px;
+  padding: 4px;
 }
 
 
@@ -195,7 +188,7 @@ nav .active {
 }
 .container3 a:hover {
   font-size: 25px;
-  color: #0047ab; /*#e1ad01;*/
+  color: #0047ab;
 }
 .years-container {
   display: flex;
@@ -208,7 +201,7 @@ nav .active {
   height: 40vh;
   overflow-y: scroll;
   border: 3px solid black;
-  background-color: #e6dff3; /*efe0ff*/
+  background-color: #e6dff3;
   margin: 15px;
 }
 .image-1980 img, .image-1981 img, .image-1982 img, .image-1983 img, .image-1984 img, .image-1985 img, .image-1986 img, .image-1987 img, .image-1988 img, .image-1989 img {
@@ -232,7 +225,6 @@ figure img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto;
-  /* margin-left: 15px; */
   margin-right: 15px;
 }
 .movie-info1, .movie-info2, .movie-info3 {
@@ -359,10 +351,7 @@ textarea {
   border: 2px solid black;
   box-sizing: border-box;
 }
-/* input[type=checkbox] {
-  display: inline;
-  width: inherit;
-} */
+
 input[type=submit] {
   background-color: #e6dff3;
   font-size: 100%;
@@ -379,8 +368,23 @@ footer {
 @media screen and (min-width: 850px) {
   nav ul {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-wrap: nowrap;
+  }
+  .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+  }
+  .photos-raiders img, .photos-ferris img, .photos-ghost img, .photos-pink img, .photos-future img, .photos-scarface img, .photos-outsider img, .photos-empire img, .photos-bfast img {
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav ul {
+    justify-content: flex-end;
   }
   header h1 {
     text-align: left;
