@@ -223,8 +223,8 @@ figure img {
 /*facts and information*/
 .container4 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
   margin-right: 15px;
 }
 .movie-info1, .movie-info2, .movie-info3 {
@@ -235,19 +235,19 @@ figure img {
   list-style-type: none;
 }
 .movie-info1 {
-  grid-column: 1 / span 1;
-  grid-row: 6 / span 1;
+  grid-column: 1 / span 2;
+  grid-row: 8 / span 1;
 }
 .movie-info2 {
-  grid-column: 2 / span 1;
-  grid-row: 6 / span 1;
+  grid-column: 1 / span 2;
+  grid-row: 9 / span 1;
 }
 .movie-info3 {
-  grid-column: 3 / span 1;
-  grid-row: 6 / span 1;
+  grid-column: 1 / span 2;
+  grid-row: 10 / span 1;
 }
 .photos {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   grid-row: 2 / span 1;
   padding: 10px;
   text-align: center;
@@ -275,35 +275,35 @@ figure img {
   grid-row: 3 / span 1;
 }
 .photos-ghost {
-  grid-column: 3 / span 1;
-  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
 }
 .photos-pink {
-  grid-column: 1 / span 1;
+  grid-column: 2 / span 1;
   grid-row: 4 / span 1;
 }
 .photos-future {
-  grid-column: 2 / span 1;
-  grid-row: 4 / span 1;
-}
-.photos-scarface {
-  grid-column: 3 / span 1;
-  grid-row: 4 / span 1;
-}
-.photos-outsider {
   grid-column: 1 / span 1;
   grid-row: 5 / span 1;
 }
-.photos-empire {
+.photos-scarface {
   grid-column: 2 / span 1;
-  grid-row:  5 / span 1;
-}
-.photos-bfast {
-  grid-column: 3 / span 2;
   grid-row: 5 / span 1;
 }
+.photos-outsider {
+  grid-column: 1 / span 1;
+  grid-row: 6 / span 1;
+}
+.photos-empire {
+  grid-column: 2 / span 1;
+  grid-row:  6 / span 1;
+}
+.photos-bfast {
+  grid-column: 1 / span 2;
+  grid-row: 7 / span 1;
+}
 .fun-facts {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   grid-row: 1 / span 1;
   text-align: justify;
 }
@@ -365,7 +365,7 @@ footer {
 }
 
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 750px) {
   nav ul {
     flex-direction: row;
     justify-content: space-between;
@@ -377,8 +377,79 @@ footer {
       flex-wrap: wrap;
       flex-direction: row;
   }
+  .container4 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+  .movie-info1 {
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+  }
+  .movie-info2 {
+    grid-column: 2 / span 1;
+    grid-row: 6 / span 1;
+  }
+  .movie-info3 {
+    grid-column: 3 / span 1;
+    grid-row: 6 / span 1;
+  }
+  .photos {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+    padding: 10px;
+    text-align: center;
+  }
   .photos-raiders img, .photos-ferris img, .photos-ghost img, .photos-pink img, .photos-future img, .photos-scarface img, .photos-outsider img, .photos-empire img, .photos-bfast img {
+    width: 25vw;
     height: 30vh;
+    align-items: bottom;
+    border: 2px solid #301934;
+    border-radius: 25px;
+  }
+  .photos-raiders, .photos-ferris, .photos-ghost, .photos-pink, .photos-future, .photos-scarface, .photos-outsider, .photos-empire, .photos-bfast {
+    text-align: center;
+    padding: 7px;
+  }
+  .photos-raiders {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .photos-ferris {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .photos-ghost {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .photos-pink {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .photos-future {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .photos-scarface {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .photos-outsider {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+  }
+  .photos-empire {
+    grid-column: 2 / span 1;
+    grid-row:  5 / span 1;
+  }
+  .photos-bfast {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 1;
+  }
+  .fun-facts {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    text-align: justify;
   }
 }
 
@@ -388,6 +459,35 @@ footer {
   }
   header h1 {
     text-align: left;
+  }
+  .button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .action {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  .comedy {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+  .drama {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+  }
+  .dance {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  .horror {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+  .family {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
   }
 }
 
